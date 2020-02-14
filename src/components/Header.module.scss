@@ -33,6 +33,11 @@ header {
     align-items: center;
     overflow-x: auto;
 
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
     li {
       a {
         transition: 0.5s;
@@ -44,9 +49,10 @@ header {
         &:hover {
           background: rgba(0, 0, 0, 0.05);
         }
+
         &.active {
-          text-decoration: underline;
           background: rgba(0, 0, 0, 0.05);
+          border-bottom: 4px solid white;
         }
       }
     }

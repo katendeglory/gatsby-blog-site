@@ -1,10 +1,3 @@
-@mixin pad {
-  padding: 5px 5rem;
-  @media (max-width: 800px) {
-    padding: 0 0.5rem;
-  }
-}
-
 div.siteWrapper {
   overflow: hidden;
   height: 100vh;
@@ -12,9 +5,14 @@ div.siteWrapper {
 
 main.wrapper {
   height: 100vh;
-  @include pad;
-  overflow: auto;
+  padding: 0 5rem;
   padding-top: 5rem;
+  overflow: auto;
+
+  @media (max-width: 800px) {
+    padding: 0 0.5rem;
+    padding-top: 5rem;
+  }
 
   display: grid;
   grid-template-columns: 1fr;
