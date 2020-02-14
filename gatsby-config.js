@@ -4,13 +4,7 @@ module.exports = {
     author: 'Glory Katende'
   },
   plugins: [
-    // `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        implementation: require("sass"),
-      }
-    },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
