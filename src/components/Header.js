@@ -1,55 +1,22 @@
 import React from 'react'
 import { Link } from 'gatsby';
-import styled from 'styled-components'
+import headerStyles from './Header.module.scss';
 
 const Header = () => {
   return (
-    <Navigation>
-      <div className="brand">GATSBY</div>
+    <header>
+      <Link className={headerStyles.brand} to="/">
+        <img src="https://cdn0.iconfinder.com/data/icons/hats-caps-twotone/48/Clothing_Hats__Caps_Artboard_32-128.png" alt="hat" />
+        GATSBY
+      </Link>
       <ul>
-        <li><Link class="link" to="/">Home</Link></li>
-        <li><Link class="link" to="/about">About</Link></li>
-        <li><Link class="link" to="/blog">Blog</Link></li>
-        <li><Link class="link" to="/contact">Contact</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
-    </Navigation>
+    </header>
   );
 }
-
-const Navigation = styled.nav`
-  margin: 0;
-  padding: 0rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  background: palevioletred;
-  box-shadow: 0 1px 5px 0 rgba(84, 84, 84, 0.2), 0 2px 2px 0 rgba(84, 84, 84, 0.2), 0 3px 1px -2px rgba(84, 84, 84, 0.2);
-
-  .brand{
-    white-space: nowrap;
-  }
-
-  ul{
-    list-style: none;
-    display: flex;
-    justify-content: end;
-    margin: 0;
-
-    li{
-      a{
-        transition: .5s;
-        text-decoration:none;
-        color: inherit;
-        display: inline-block;
-        padding: 20px 25px;
-
-        &:hover{
-          background: rgba(0, 0, 0, 0.05);
-        }
-      }
-    }
-  }
-`;
 
 export default Header;

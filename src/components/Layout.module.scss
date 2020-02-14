@@ -1,0 +1,28 @@
+@mixin pad {
+  padding: 5px 5rem;
+  @media (max-width: 800px) {
+    padding: 0 0.5rem;
+  }
+}
+
+div.siteWrapper {
+  overflow: hidden;
+  height: 100vh;
+}
+
+main.wrapper {
+  height: 100vh;
+  @include pad;
+  overflow: auto;
+  padding-top: 5rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+
+  footer {
+    // color: white;
+    // background: RGB(84, 44, 133);
+    color: RGB(84, 44, 133);
+  }
+}
