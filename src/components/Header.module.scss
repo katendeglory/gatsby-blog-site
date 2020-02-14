@@ -21,6 +21,12 @@ header {
     text-decoration: none;
     color: white !important;
 
+    @media (max-width: 800px) {
+      .brandText {
+        display: none;
+      }
+    }
+
     img {
       height: 50px;
     }

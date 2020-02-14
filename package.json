@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop-m": "gatsby develop -H 0.0.0.0 -p 8000",
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "develop-m": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -17,9 +17,11 @@
   "dependencies": {
     "gatsby": "^2.19.7",
     "gatsby-plugin-sass": "^2.1.28",
-    "node-sass": "^4.13.1",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-remark": "^2.6.51",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "sass": "^1.25.0",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {

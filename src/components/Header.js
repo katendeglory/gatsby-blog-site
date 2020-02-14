@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <header>
       <Link className={headerStyles.brand} to="/">
-        <img src="https://cdn0.iconfinder.com/data/icons/hats-caps-twotone/48/Clothing_Hats__Caps_Artboard_32-128.png" alt="hat" />
-        GATSBY
+        <img className={headerStyles.brandLogo} src="https://cdn0.iconfinder.com/data/icons/hats-caps-twotone/48/Clothing_Hats__Caps_Artboard_32-128.png" alt="hat" />
+        <span className={headerStyles.brandText}>GATSBY</span>
       </Link>
       <ul>
         <li><Link to="/" activeClassName={headerStyles.active}>Home</Link></li>
