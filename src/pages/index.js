@@ -2,7 +2,34 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
+
+const GET_POSTS = gql`
+  query {
+    getPosts{
+      _id
+      username
+      body
+      createdAt
+      likeCount
+      commentCount
+    }
+  }
+`;
+
+
 const Index = () => {
+
+  const { data, loading, error } = useQuery(GET_POSTS);
+
+  if (loading) return <div>Loading</div>
+  if (error) return <div>Error : {error.message}</div>
+
+  console.log(data);
+
+  //const posts = data;
+
   return (
     <Layout>
       <h1>Hello World</h1>
