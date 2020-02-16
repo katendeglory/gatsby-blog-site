@@ -40,7 +40,6 @@ const Blog = () => {
           );
         })}
       </ul>
-
     </Layout>
   );
 }
