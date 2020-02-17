@@ -14,6 +14,10 @@ p {
   line-height: 1.4rem;
 }
 
+ul {
+  list-style: none;
+}
+
 html {
   ::-webkit-scrollbar {
     width: 5px;
@@ -47,5 +51,30 @@ html {
   }
   ::-webkit-scrollbar-corner {
     background: transparent;
+  }
+}
+
+.link {
+  color: RGB(84, 44, 133);
+  transition: 0.5s;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    display: block;
+    width: 0;
+    height: 2px;
+    background: RGB(84, 44, 133);
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    width: 100%;
   }
 }
