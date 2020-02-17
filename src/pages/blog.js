@@ -29,10 +29,10 @@ const Blog = () => {
 
   return (
     <Layout>
-      <h1>Blog Posts</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis veniam eum sequi deserunt laborum eaque, amet commodi magni nemo labore cupiditate iste ipsum dolor nobis minima vel. Reprehenderit, incidunt quibusdam.</p>
+      <h1 className="y-margin">Blog Posts</h1>
+      <p className="y-margin">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis veniam eum sequi deserunt laborum eaque, amet commodi magni nemo labore cupiditate iste ipsum dolor nobis minima vel. Reprehenderit, incidunt quibusdam.</p>
 
-      <h1>Recent Posts:</h1>
+      <h1 className="y-margin">Recent Posts:</h1>
 
       <ul className="blog-post-container">
         {edges.map((edge, i) => {
