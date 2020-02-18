@@ -1,22 +1,24 @@
 const path = require('path');
 
-//On create node, create a slug connection
+/*
+  Parses the file system to create node fields for markdown files that create page will query
+  Created nodes will be queriable at allMarkdownRemark.edges.node.fields.slug
+*/
 module.exports.onCreateNode = ({ node, actions }) => {
   if (node.internal.type === 'MarkdownRemark') {
     const slug = path.basename(node.fileAbsolutePath, '.md');
     console.log("@@@@@@@@@@@@@@@@@@@@@", slug);
 
     actions.createNodeField({
-      node,
+      node: node,
       name: 'slug',
       value: slug
     });
   }
 }
 
-//For each slug create a page and pass the slug to the context for the template
+//Get the fields created above and create pages for each of them
 module.exports.createPages = async ({ graphql, actions }) => {
-
   const res = await graphql(`
     query {
       allMarkdownRemark {
