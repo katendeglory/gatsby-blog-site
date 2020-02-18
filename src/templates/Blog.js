@@ -14,12 +14,16 @@ export const query = graphql`
   }
 `;
 
+
 const Blog = (props) => {
+
+  const { frontmatter, html } = props.data.markdownRemark;
+
   return (
     <Layout>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <p>{props.data.markdownRemark.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Layout>
   );
 }
