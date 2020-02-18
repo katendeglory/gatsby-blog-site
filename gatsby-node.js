@@ -17,7 +17,9 @@ module.exports.onCreateNode = ({ node, actions }) => {
   }
 }
 
-//Get the fields created above and create pages for each of them
+/*
+  Get the fields created above and create pages for each of them
+*/
 module.exports.createPages = async ({ graphql, actions }) => {
   const res = await graphql(`
     query {
