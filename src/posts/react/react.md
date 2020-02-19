@@ -1,5 +1,5 @@
 ---
-title: "Learn to Build Amazing Apps with React"
+title: "Amazing Web Apps with React"
 date: "2020-02-12"
 ---
 
