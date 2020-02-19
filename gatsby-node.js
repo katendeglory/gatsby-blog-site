@@ -3,6 +3,8 @@ const path = require('path');
 /*
   Parses the file system to create node fields for markdown files that create page will query
   Created nodes will be queriable at allMarkdownRemark.edges.node.fields.slug
+  ⚠ In the next project, just drop this over-engineered way of doing stuffs, just put the 
+      Slugs in the ---front matter---
 */
 module.exports.onCreateNode = ({ node, actions }) => {
   if (node.internal.type === 'MarkdownRemark') {
@@ -39,6 +41,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       component: path.resolve('./src/templates/Blog.js'),
       path: `/blog/${edge.node.fields.slug}`,
+      // Is the argument passed to the page's query
       context: { slug: edge.node.fields.slug }
     });
   });
