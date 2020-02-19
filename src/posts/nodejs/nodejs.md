@@ -4,7 +4,7 @@ date: "2020-02-19"
 slug: "why-we-love-node-js"
 ---
 
-A new backend tool has just join the stack!
+A new backend tool has just join the stack! 🔥🔥
 
 ![nodejs](nodejs.jpg)
 
