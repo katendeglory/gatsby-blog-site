@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './../components/Layout';
 import { graphql } from 'gatsby';
+import BlogStyle from './Blog.module.scss';
 
 const Blog = (props) => {
   // console.log(props);
@@ -11,7 +12,9 @@ const Blog = (props) => {
     <Layout>
       <h1>{frontmatter.title}</h1>
       <p>{frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: html }}></div>
+      <div className={BlogStyle.blog_content}>
+        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+      </div>
     </Layout>
   );
 }
