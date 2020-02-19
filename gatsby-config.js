@@ -3,6 +3,7 @@ module.exports = {
     title: 'Gatsby Site',
     author: 'Glory Katende'
   },
+  pathPrefix: 'gatsby-blog-site',
   plugins: [
     `gatsby-plugin-sass`,
     {

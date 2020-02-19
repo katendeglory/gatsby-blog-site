@@ -12,7 +12,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "git-combo": "git add . && git commit -am \"Yet another commit\" && git push"
+    "git-combo": "git add . && git commit -am \"Yet another commit\" && git push",
+    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "apollo-boost": "^0.4.7",
