@@ -3,8 +3,7 @@ import Layout from './../components/Layout';
 import { graphql } from 'gatsby';
 
 const Blog = (props) => {
-  //Check out some props
-  console.log(props);
+  // console.log(props);
 
   const { frontmatter, html } = props.data.markdownRemark;
 
