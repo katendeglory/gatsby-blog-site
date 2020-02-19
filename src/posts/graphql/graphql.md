@@ -1,6 +1,7 @@
 ---
 title: "Build Modern APIs with GraphQL"
 date: "2020-02-17"
+slug: "build-modern-api-with-graphql"
 ---
 
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis architecto quibusdam non aperiam ducimus

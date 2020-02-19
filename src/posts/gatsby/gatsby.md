@@ -1,6 +1,7 @@
 ---
 title: "The Great Gatsby Bootcamp"
 date: "2020-02-14"
+slug: "the-great-gatsby-bootcamp"
 ---
 
 We have just launched a new bootcamp!

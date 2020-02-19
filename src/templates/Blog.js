@@ -4,7 +4,8 @@ import { graphql } from 'gatsby';
 import BlogStyle from './Blog.module.scss';
 
 const Blog = (props) => {
-  // console.log(props);
+
+  console.log({ props });
 
   const { frontmatter, html } = props.data.markdownRemark;
 
@@ -21,7 +22,7 @@ const Blog = (props) => {
 
 export const query = graphql`
   query MarkdownRemark ($slug : String){
-    markdownRemark(fields: {slug :{eq: $slug}}){
+    markdownRemark(frontmatter: {slug :{eq: $slug}}){
       frontmatter{
         title
         date
